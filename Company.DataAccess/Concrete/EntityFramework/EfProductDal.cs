@@ -5,7 +5,7 @@ using Company.Entities.Concrete;
 
 namespace Company.DataAccess.Concrete.EntityFramework
 {
-    public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
+    public class EfProductDal : EfRepositoryBase<Product, NorthwindContext>, IProductDal
     {
 
     }
