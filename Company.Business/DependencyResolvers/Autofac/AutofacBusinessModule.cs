@@ -3,9 +3,6 @@ using Company.Business.Abstract;
 using Company.Business.Concrete;
 using Company.DataAccess.Abstract;
 using Company.DataAccess.Concrete.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Company.Business.DependencyResolvers.Autofac
 {
@@ -18,6 +15,9 @@ namespace Company.Business.DependencyResolvers.Autofac
             
             builder.RegisterType<EfProductDal>().As<IProductDal>();
             builder.RegisterType<EfCategoryDal>().As<ICategoryDal>();
+
+            builder.RegisterType<UserManager>().As<IUserService>();
+            builder.RegisterType<EfUserDal>().As<IUserDal>();
         }
     }
 }
