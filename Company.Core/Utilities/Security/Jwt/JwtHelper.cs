@@ -36,6 +36,7 @@ namespace Company.Core.Utilities.Security.Jwt
             var signingCredentials = SigningCredentialsHelper.CreateSigningCredentials(securityKey);
             var jwt = CreateJwtSecurityToken(_tokenOptions, user, signingCredentials, operationClaims);
             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+            
             var token = jwtSecurityTokenHandler.WriteToken(jwt);
             return new AccessToken
             {
