@@ -64,9 +64,9 @@ namespace Company.WebAPI
 
             app.UseRouting();
 
-            app.UseAuthorization();
             //added for user authentication
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
